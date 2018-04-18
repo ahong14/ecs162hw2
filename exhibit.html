@@ -4,10 +4,20 @@
 
 <head>
 
+<meta charset="UTF-8">
 <title> Art Exhibit </title>
 
-<link rel="stylesheet" type="text/css" href="exhibit.css"/>
+<!-- styles -->
+<!-- <link rel="stylesheet" type="text/css" href="reset.css"/> -->
 <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="exhibit.css"/>
+
+
+
+<!--scriptes -->
+<script src = "main.js"> </script>
 
 </head>
 
@@ -17,15 +27,17 @@
     <div id = "header">
         <div id = "title">
             <h1> WAYNE THIEBAUD</h1>
-            <h3>  Exhibition at Manetti Shrem Museum</h3>
+            <h3 id = "museum_caption"> Exhibition at Manetti Shrem Museum</h3>
         </div>
 
         <div id = "navbar">
+
             <a href="#">HOME </a>
             <p class = "mobile_separator"> | </p>
             <a href = "#"> ABOUT </a>
             <p class = "mobile_separator"> | </p>
             <a href = "#"> CONTACT </a>
+           
         </div>
 
     </div>  <!-- end of header -->
@@ -33,8 +45,15 @@
     <div id = "main_content">
         <div id = "full_page">
             <div id = "info">
-                <h2> Open Until May 13</h2>
-                <h3> free to the public </h3>
+                
+                <div id = "price_date">
+                    <h3 id = "open_date"> Open Until May 13</h2>
+                    <h3 id = "mobile_sep_480"> | </p>
+                    <h3 id = "free_public"> free to the public </h3>
+                </div>
+
+                <hr id = "main_horizontal_line">    
+                
                 <div id="info_content">
                     <p>
                             At an extraordinary historical moment,
@@ -62,45 +81,45 @@
 
         <div id = "gallery">
 
-            <div class = "two_picture_container">
-                <div class = "picture_container">
+            <div class = "two_picture_container" >
+                <div class = "picture_container" id = "wind_container" onclick = "changeImage(this.id)">
                     <img class = "picture" src = "exhibitAssets/Wind Toys, 1962. oil on canvas.jpg" alt = "wind toys"/>
-                    <figcaption class = "picture_caption"> <strong>Wind Toys</strong> </figcaption>
-                    <figcaption class = "picture_caption paint_description"> (1962. oil on canvas) </figcaption> 
+                    <figcaption class = "picture_caption" id = "wind_toys_caption"> Wind Toys </figcaption>
+                    <figcaption class = "picture_caption paint_description" id = "wind_toys_paint" > (1962. oil on canvas) </figcaption> 
                 </div>  
                 
-                <div class = "picture_container">
+                <div class = "picture_container" id = "pancake_container" onclick = "changeImage(this.id)">
                     <img class = "picture" src = "exhibitAssets/Pancake Breakfast, 2008. oil on canvas.jpg" alt = "pancake"/>
-                    <figcaption class = "picture_caption"> <strong>Pancake Breakfast</strong> </figcaption>
-                    <figcaption class = "picture_caption paint_description"> (2008. oil on canvas) </figcaption> 
+                    <figcaption class = "picture_caption" id = "pancake_caption"> Pancake Breakfast </figcaption>
+                    <figcaption class = "picture_caption paint_description" id = "pancake_paint"> (2008. oil on canvas) </figcaption> 
                 </div>
             </div>    
     
             <div class = "two_picture_container">
-                <div class = "picture_container">
-                    <img class = "picture" src = "exhibitAssets/Around the Cake, 1962, oil on canvas.jpg" alt = "around cake"/>
-                    <figcaption class = "picture_caption"> <strong>Around the Cake</strong> </figcaption>
-                    <figcaption class = "picture_caption paint_description"> (1962. oil on canvas) </figcaption> 
+                <div class = "picture_container" id = "cake_container" onclick = "changeImage(this.id)">
+                    <img class = "picture" src = "exhibitAssets/Around the Cake, 1962, oil on canvas.jpg" alt = "around cake" />
+                    <figcaption class = "picture_caption" id = "cake_caption" > Around the Cake </figcaption>
+                    <figcaption class = "picture_caption paint_description" id = "cake_painting" > (1962. oil on canvas) </figcaption> 
                 </div>
         
-                <div class = "picture_container">
-                    <img class = "picture" src = "exhibitAssets/Three Machines, 1963. oil on canvas.jpg" alt = "gumball machines"/>
-                    <figcaption class = "picture_caption"> <strong> Three Machines</strong> </figcaption>
-                    <figcaption class = "picture_caption paint_description"> (1963. oil on canvas) </figcaption> 
+                <div class = "picture_container" id = "gumball_container" onclick = "changeImage(this.id)">
+                    <img class = "picture" src = "exhibitAssets/Three Machines, 1963. oil on canvas.jpg" alt = "gumball machines" />
+                    <figcaption class = "picture_caption" id = "gumball_caption">  Three Machines </figcaption>
+                    <figcaption class = "picture_caption paint_description" id = "gumball_painting"> (1963. oil on canvas) </figcaption> 
                 </div>
             </div>    
     
             <div class = "two_picture_container">
-                <div class = "picture_container">
-                    <img class = "picture" src = "exhibitAssets/Boston Creems, 1962. oil on canvas.jpg" alt = "boston creams"/>
-                    <figcaption class = "picture_caption"> <strong>Boston Cremes</strong> </figcaption>
-                    <figcaption class = "picture_caption paint_description"> (1962. oil on canvas) </figcaption> 
+                <div class = "picture_container" id = "boston_container" onclick = "changeImage(this.id)">
+                    <img class = "picture" src = "exhibitAssets/Boston Creems, 1962. oil on canvas.jpg" alt = "boston creams" />
+                    <figcaption class = "picture_caption" id = "boston_caption"> Boston Cremes </figcaption>
+                    <figcaption class = "picture_caption paint_description" id = "boston_painting"> (1962. oil on canvas) </figcaption> 
                 </div>
         
-                <div class = "picture_container">
-                    <img class = "picture" src = "exhibitAssets/Bananas, 1963. Oil on canvas.jpg" alt = "bananas"/>
-                    <figcaption class = "picture_caption"> <strong>Bananas</strong> </figcaption>
-                    <figcaption class = "picture_caption paint_description"> (1963. oil on canvas) </figcaption> 
+                <div class = "picture_container" id = "bananas_container" onclick = "changeImage(this.id)">
+                    <img class = "picture" src = "exhibitAssets/Bananas, 1963. Oil on canvas.jpg" alt = "bananas" />
+                    <figcaption class = "picture_caption" id = "banana_caption"> Bananas </figcaption>
+                    <figcaption class = "picture_caption paint_description" id = "banana_painting"> (1963. oil on canvas) </figcaption> 
                 </div>
             </div>
 
